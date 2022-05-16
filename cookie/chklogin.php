@@ -1,6 +1,5 @@
 
 <?php
-session_start();
 $default_user='wayne';
 $default_pw='12345';
 
@@ -12,7 +11,7 @@ if($acc!=$default_user || $pw!=$default_pw){
     header("location:login.php?error=$error");
 }else{
     // $error="帳號密碼輸入正確!!將帶您到會員首頁區!!";
-    $_SESSION('login',$acc,time()+600);//設cookie
+    setcookie('login',$acc,time()+600);//設cookie
     header("location:membercenter.php");
 }
 

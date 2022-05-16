@@ -7,10 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-    session_start();
-    ?>
-    <h1>歡迎<?=$_SESSION['login'];?></h1>
+    <h1>歡迎<?=$_COOKIE['login'];?></h1>
     <li><a href="logout.php">登出</a></li>
 </body>
 </html>

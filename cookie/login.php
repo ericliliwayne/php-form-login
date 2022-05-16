@@ -1,6 +1,5 @@
 <?php
-session_start();
-if(isset($_SESSION['login'])){//判斷有cookie直接導到其他頁面否則流再login畫面
+if(isset($_COOKIE['login'])){//判斷有cookie直接導到其他頁面否則流再login畫面
     header("location:membercenter.php");
 }
 ?>
